@@ -409,3 +409,17 @@ input[type="text"]::-webkit-input-placeholder { color: #fff; }
 
 
 
+.lang-link {
+  margin: 0 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+}
+
+.lang-link:hover {
+  transform: scale(1.2);
+}
+
+
+
