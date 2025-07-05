@@ -41,13 +41,17 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="assets/css/style.css">
 
-        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
 		<!-- Font Awesome -->
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> 
@@ -55,6 +59,27 @@
     </head>
 
     <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container d-flex justify-content-between align-items-center">
+    
+    <!-- الشعار محاذي لليمين في RTL -->
+    <a class="navbar-brand order-2" href="#">
+      <img src="assets/img/logo.png" alt="مكسبو 2025" style="height: 50px;">
+    </a>
+
+    <!-- روابط اللغة -->
+    <div class="language-switcher order-1 d-flex align-items-center">
+      
+      <!-- في الصفحة الإنجليزية نظهر العربية فقط -->
+      <a href="index_ar.html" class="lang-link" title="العربية">
+        <img src="assets/img/flags/ar.png" alt="العربية" class="lang-flag" />
+      </a> 
+    </div>
+
+  </div>
+</nav>
+
 
 <!-- Navigation Bar (English only)
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2aa8a8;">
@@ -172,18 +197,19 @@
     <div class="container text-center">
         <div class="row">
             <!-- أيقونات وسائل التواصل الاجتماعي -->
-          
-  <ul class="social-icon list-inline mb-0">
-    <li class="list-inline-item mx-2">
-      <a href="https://www.facebook.com/makespo2025" aria-label="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
-    </li>
-    <li class="list-inline-item mx-2">
-      <a href="https://www.youtube.com/" aria-label="YouTube"><i class="fa fa-youtube-square fa-2x"></i></a>
-    </li>
-    <li class="list-inline-item mx-2">
-      <a href="https://www.instagram.com/makespo2025" aria-label="Instagram"><i class="fa fa-instagram fa-2x"></i></a>
-    </li>
-  </ul>
+            <div class="col-12 mb-3">
+                <ul class="social-icon list-inline mb-0">
+                    <li class="list-inline-item mx-2">
+                        <a href="https://www.facebook.com/makespo2025" aria-label="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li class="list-inline-item mx-2">
+                        <a href="https://www.youtube.com/" aria-label="YouTube"><i class="fa fa-youtube-square fa-2x"></i></a>
+                    </li>
+                    <li class="list-inline-item mx-2">
+                        <a href="https://www.instagram.com/makespo2025" aria-label="Instagram"><i class="fa fa-instagram fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="row">
             <!-- حقوق الحفظ -->
