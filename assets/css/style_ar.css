@@ -1,0 +1,421 @@
+/* ======== إعدادات عامة ======== */
+
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    direction: rtl; /* دعم اتجاه النص من اليمين إلى اليسار */
+}
+
+strong { font-weight: 700; }
+
+a, a:hover, a:focus {
+    color: #FEFEFE;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 54px;
+}
+
+img { max-width: 100%; }
+
+::-moz-selection { background: #2aa8a8; color: #fff; text-shadow: none; }
+::selection { background: #2aa8a8; color: #fff; text-shadow: none; }
+
+
+/* ======= تنسيقات القائمة التفاعلية (Navbar) ======= */
+
+.navbar {
+    background-color: #2aa8a8 !important; /* اللون الأساسي */
+    padding: 0.8rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    direction: rtl; /* دعم RTL */
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* محاذاة الشعار للنص العربي */
+}
+
+.navbar-brand img {
+    max-height: 80px; /* حجم الشعار */
+    margin-left: 10px; /* بدل margin-right في RTL */
+    filter: brightness(0) invert(1); /* لجعل الشعار أبيض إذا كان لونه أسود */
+}
+
+/* دعم اتجاه اللغة العربية (RTL) */
+html[dir="rtl"] .navbar-brand img {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding-right: 0; /* بدل padding-left */
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    direction: rtl;
+}
+
+.navbar-nav > li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+/* دعم اتجاه اللغة العربية (RTL) */
+html[dir="rtl"] .navbar-nav {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* محاذاة القوائم */
+.navbar-nav.mr-auto {
+    margin-left: auto; /* بدل margin-right */
+}
+
+.navbar-nav.ml-auto {
+    margin-right: auto; /* بدل margin-left */
+}
+
+.navbar-nav .nav-link {
+    color: #e0f7f7 !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #144d4d !important; /* لون داكن عند المرور */
+    text-decoration: none;
+}
+
+/* العنصر النشط */
+.navbar-nav .active > .nav-link {
+    color: #144d4d !important;
+    font-weight: 700;
+}
+
+/* القائمة المنسدلة */
+.dropdown-menu {
+    background-color: #2aa8a8 !important;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    min-width: 180px;
+    direction: rtl;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #e0f7f7 !important;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    background-color: #144d4d !important;
+    color: #ffffff !important;
+}
+
+/* زر القائمة في الأجهزة الصغيرة */
+.navbar-toggler {
+    border-color: #144d4d !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23144d4d' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* قائمة اختيار اللغة */
+.navbar-nav .dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+
+
+/***** Coming Soon *****/
+
+.coming-soon {
+    margin: 0 auto;
+    direction: rtl;
+}
+
+.inner-bg {
+    padding: 75px 0 40px 0;
+}
+
+.coming-soon .logo {
+    padding-bottom: 20px;
+}
+
+.coming-soon .logo h1 {
+    margin: 0;
+}
+
+.coming-soon .logo a {
+    display: inline-block;
+    max-height: 180px; /* حجم الشعار */
+    background-size: contain; /* لضبط حجم الخلفية داخل العنصر */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.coming-soon p {
+    margin: 60px 0 10px 0;
+    padding: 0 120px;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.timer {
+    margin-top: 60px;
+}
+
+.timer .days-wrapper,
+.timer .hours-wrapper,
+.timer .minutes-wrapper,
+.timer .seconds-wrapper {
+    display: inline-block;
+    width: 160px;
+    margin: 0 10px;
+    font-size: 18px;
+    /* border: 1px solid rgba(255, 255, 255, 0.41); */
+    padding: 25px 10px;
+    /* border-style: dashed; */
+    background-color: rgba(0, 0, 0, 0.17);
+    /* border-bottom-color: #F02020; */
+    border-bottom: solid #2aa8a8 2px;
+}
+
+.timer .days,
+.timer .hours,
+.timer .minutes,
+.timer .seconds {
+    font-size: 80px;
+    font-weight: 100;
+    line-height: 90px;
+}
+
+.subscribe {
+    margin-top: 60px;
+}
+
+.subscribe form input {
+    width: 362px;
+    height: 52px;
+}
+
+.success-message, .error-message {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+/***** Footer *****/
+
+footer {
+    margin-top: 60px;
+    padding: 20px 0 15px 0;
+    background: rgba(222, 211, 211, 0.14);
+    color: #fff;
+    direction: rtl;
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff;
+    text-align: right;
+}
+
+.footer-copyright a {
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+}
+
+.footer-copyright a:hover {
+    color: #fff;
+    border: 0;
+}
+
+.footer-social {
+    text-align: left; /* عكس المحاذاة بسبب RTL */
+}
+
+/* social icons */
+ul.social-icon {
+    padding: 0;
+    margin: 0;
+}
+
+ul.social-icon li {
+    display: inline;
+    list-style: none;
+}
+
+ul.social-icon li a i {
+    font-size: 24px;
+    margin-right: 10px; /* بدل margin-left */
+}
+
+/* تنسيقات الحقول */
+
+input[type="text"] {
+    margin: 0;
+    padding: 0 10px;
+    vertical-align: middle;
+    background: none;
+    border: 1px solid rgba(227, 230, 238, 0.8);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all .3s;
+    margin-left: -4px; /* بدل margin-right */
+}
+
+input[type="text"]:focus {
+    outline: 0;
+    border: 1px solid #fff;
+    box-shadow: none;
+}
+
+input[type="text"]:-moz-placeholder { color: #fff; }
+input[type="text"]:-ms-input-placeholder { color: #fff; }
+input[type="text"]::-webkit-input-placeholder { color: #fff; }
+
+.subscribe button {
+    height: 52px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #2aa8a8;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 52px;
+    color: #fff;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all .3s;
+}
+
+.subscribe button:hover {
+    background: #2aa8a8;
+    color: #fff;
+}
+
+.subscribe button:active,
+.subscribe button:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+    outline: 0;
+    background: #555;
+    color: #fff;
+}
+
+/* استجابات الشاشة */
+
+/* شاشات كبيرة */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* يمكن إضافة تعديلات خاصة */
+}
+
+/* شاشات متوسطة */
+@media (min-width: 768px) and (max-width: 991px) {
+    .coming-soon p { padding: 0; }
+    .timer .days-wrapper, .timer .hours-wrapper, .timer .minutes-wrapper, .timer .seconds-wrapper { width: 150px; }
+}
+
+/* شاشات صغيرة */
+@media (max-width: 767px) {
+    .coming-soon p { padding: 0; }
+    .timer .days-wrapper, .timer .hours-wrapper, .timer .minutes-wrapper, .timer .seconds-wrapper { width: 150px; }
+    .timer .slash { display: none; }
+    .footer-copyright p, .footer-social { text-align: center; }
+    .footer-copyright { padding-bottom: 15px; }
+}
+
+/* شاشات صغيرة جداً */
+@media (max-width: 550px) {
+    .subscribe form input { width: 95%; }
+    .subscribe form button { width: 95%; margin-top: 10px; }
+}
+
+/* شاشات صغيرة جداً جداً */
+@media (max-width: 400px) {
+    h1, h2 { font-size: 32px; }
+}
+
+/* محاذاة الشعار إلى اليمين في RTL */
+html[dir="rtl"] .navbar-brand {
+  order: 2; /* يجعل الشعار في النهاية (يمين) */
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+/* محاذاة الشعار إلى اليسار في LTR */
+html[dir="ltr"] .navbar-brand {
+  order: 1; /* الشعار في البداية (يسار) */
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+/* ترتيب روابط اللغة */
+.language-switcher {
+  gap: 10px;
+}
+
+.lang-link {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.lang-link:hover {
+  transform: scale(1.1);
+}
+
+.lang-flag {
+  width: 28px;
+  height: 20px;
+  border-radius: 3px;
+  display: block;
+}
+
+/* ترتيب روابط اللغة حسب اتجاه الصفحة */
+html[dir="rtl"] .language-switcher {
+  order: 1; /* تظهر على اليسار */
+}
+
+html[dir="ltr"] .language-switcher {
+  order: 2; /* تظهر على اليمين */
+}
